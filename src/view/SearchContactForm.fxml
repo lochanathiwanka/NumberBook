@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SearchContactFormController">
+   <children>
+      <Label layoutX="517.0" layoutY="35.0" prefHeight="43.0" prefWidth="247.0" text="Search Contact">
+         <font>
+            <Font name="Century Schoolbook Italic" size="34.0" />
+         </font>
+      </Label>
+      <Line endX="136.0" endY="-1.52587890625E-5" layoutX="618.0" layoutY="78.0" startX="-100.0" />
+      <JFXTextField fx:id="txtSearch" layoutX="44.0" layoutY="157.0" onKeyTyped="#clearTextFieldOnKeyTyped" promptText="Search  &gt;&gt;">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXTextField>
+      <ImageView accessibleRole="BUTTON" fitHeight="43.0" fitWidth="38.0" layoutX="296.0" layoutY="160.0" onMouseClicked="#searchOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../css/searchContact.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <JFXButton buttonType="RAISED" layoutX="700.0" layoutY="606.0" onAction="#cancelOnAction" prefHeight="65.0" prefWidth="110.0" style="-fx-background-color: #ffff; -fx-background-radius: 30; -fx-background-insets: 0; -fx-font-weight: bold; -fx-border-color: black; -fx-border-radius: 30; -fx-border-width: 2;" text="Cancel">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor>
+      </JFXButton>
+      <ImageView accessibleRole="BUTTON" fitHeight="30.0" fitWidth="48.0" layoutX="43.0" layoutY="30.0" onMouseClicked="#backOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../css/blackArrowBack.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <TableView fx:id="contactTable" layoutX="42.0" layoutY="232.0" prefHeight="349.0" prefWidth="1187.0" style="-fx-font-size: 20;" stylesheets="@../css/TableView.css">
+        <columns>
+          <TableColumn fx:id="colFirstName" prefWidth="220.0" text="First Name" />
+          <TableColumn fx:id="colLastName" prefWidth="205.0" text="Last name" />
+            <TableColumn fx:id="colAddress" prefWidth="205.0" text="Address" />
+            <TableColumn fx:id="colContact" minWidth="0.0" prefWidth="200.0" text="Contact" />
+            <TableColumn fx:id="colEmail" prefWidth="356.0" text="Email" />
+        </columns>
+      </TableView>
+      <ImageView accessibleRole="BUTTON" fitHeight="76.0" fitWidth="45.0" layoutX="351.0" layoutY="157.0" onMouseClicked="#clearTextFieldOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../css/clearField.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>

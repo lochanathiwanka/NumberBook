@@ -1,0 +1,7 @@
+#btnCreateNewContact {
+    -fx-background-color: linear-gradient(#1ED761, #1ED761);
+    -fx-background-radius: 30;
+    -fx-background-insets: 0;
+    -fx-font-family: bold;
+    -fx-text-fill: white;
+}
